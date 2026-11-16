@@ -3,9 +3,7 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const NavStyled = styled.nav`
-    background-color: #14415c;
-    padding: 4%;
-    margin-bottom: 2%;
+    padding: 3%;
     text-align: center;
 `
 
@@ -16,7 +14,7 @@ const UlStyled = styled.ul`
 
 const LiStyled = styled.li`
     border: 2px solid #bbbbea;
-    padding: 2%;
+    padding: 1% 2%;
     margin: 3%;
     display: inline;
 
@@ -28,6 +26,7 @@ const LiStyled = styled.li`
 const LinkStyled = styled(Link)`
     text-decoration: none;
     color: aliceblue;
+    font: calc(2px + 1.4) disneyFont "Comic Sans MS", sans-serif;
 `
 
 

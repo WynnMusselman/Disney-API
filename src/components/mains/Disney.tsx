@@ -2,13 +2,28 @@ import {useState, useEffect} from "react";
 import type {Character} from "../../interfaces/Characters.ts";
 import styled from "styled-components";
 
+const MainStyled = styled.main`
+    width: 85vw;
+    text-align: center;
+    margin: auto;
+`
+
+const PageTitle = styled.h2`
+    font: calc(2px + 3vw) "Comic Sans MS", disneyFont, cursive;
+    margin: 1%;
+`
+
 const ItemsWrapper = styled.main`
     display: flex;
     flex-flow: row wrap;
 `;
 
 const Item = styled.div`
-    margin: 3%;
+    margin: 4%;
+`
+
+const ItemTitle = styled.h3`
+    font: calc(2px + 2vw) disneyFont, "Comic Sans MS", cursive;
 `
 
 const ItemImg = styled.img`
@@ -40,7 +55,9 @@ export default function Disney(){
         <>
             {/*<h1>DISNEY CHARACTERS</h1>*/}
 
-            <main>
+            <MainStyled>
+                <PageTitle>Full Character List</PageTitle>
+
                 <label>Select Page Number: </label>
                 <input
                     type = "number"
@@ -54,13 +71,13 @@ export default function Disney(){
                     {
                         characters.map((character: Character) =>
                             <Item key = {character._id}>
-                                <h2>{character.name}</h2>
+                                <ItemTitle>{character.name}</ItemTitle>
                                 <ItemImg src = {character.imageUrl} alt = {character.name} />
                             </Item>
                         )
                     }
                 </ItemsWrapper>
-            </main>
+            </MainStyled>
         </>
     )
 }

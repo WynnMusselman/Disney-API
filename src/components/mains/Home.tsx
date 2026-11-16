@@ -5,7 +5,7 @@ const MainStyled = styled.main`
 `
 
 const ImgStyled = styled.img`
-    max-width: 95vw;
+    max-width: 85vw;
 `
 
 
