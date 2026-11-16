@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import type {Character} from "../interfaces/Characters.ts";
+import type {Character} from "../../interfaces/Characters.ts";
 import styled from "styled-components";
 
 const ItemsWrapper = styled.main`
