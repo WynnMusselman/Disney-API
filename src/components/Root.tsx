@@ -6,6 +6,7 @@ import GlobalStyle from "./GlobalStyles/GlobalStyles.tsx";
 import Header from "./Header.tsx";
 import GlobalFonts from "./GlobalStyles/GlobalFonts.tsx";
 import styled from "styled-components";
+import Footer from "./Footer.tsx";
 
 const NavHeaderWrapper = styled.div`
     background-color: #14415c;
@@ -29,6 +30,8 @@ export default function Root(){
                 <Route path={"/"} element = {<Home/>}/>
                 <Route path = {"/disney"} element = {<Disney/>}/>
             </Routes>
+
+            <Footer/>
         </>
     )
 }

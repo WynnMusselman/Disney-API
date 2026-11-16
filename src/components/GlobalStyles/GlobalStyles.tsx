@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
     body {
         background-color: #afd3f3;
     }
+    
+    main{
+        min-height: 100vh;
+    }
 
 `
 
