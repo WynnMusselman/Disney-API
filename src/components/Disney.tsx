@@ -1,7 +1,11 @@
 import {useState, useEffect} from "react";
 import type {Character} from "../interfaces/Characters.ts";
+import styled from "styled-components";
 
-
+const ItemsWrapper = styled.main`
+    display: flex;
+    flex-flow: row wrap;
+`;
 
 export default function Disney(){
 
@@ -25,27 +29,29 @@ export default function Disney(){
     // HTML
     return(
         <>
-            <h1>DISNEY CHARACTERS</h1>
+            {/*<h1>DISNEY CHARACTERS</h1>*/}
 
-            <label>Select Page Number: </label>
-            <input
-                type = "number"
-                value={page}
-                onChange = {(e) => setPage(e.target.valueAsNumber)}
-                max = {149}
-                min = {1}
-            ></input>
+            <main>
+                <label>Select Page Number: </label>
+                <input
+                    type = "number"
+                    value={page}
+                    onChange = {(e) => setPage(e.target.valueAsNumber)}
+                    max = {149}
+                    min = {1}
+                ></input>
 
-            <div>
-                {
-                    characters.map((character: Character) =>
-                        <div key = {character._id}>
-                            <h2>{character.name}</h2>
-                            <img src = {character.imageUrl} alt = {character.name} />
-                        </div>
-                    )
-                }
-            </div>
+                <ItemsWrapper>
+                    {
+                        characters.map((character: Character) =>
+                            <div key = {character._id}>
+                                <h2>{character.name}</h2>
+                                <img src = {character.imageUrl} alt = {character.name} />
+                            </div>
+                        )
+                    }
+                </ItemsWrapper>
+            </main>
         </>
     )
 }
