@@ -7,6 +7,15 @@ const ItemsWrapper = styled.main`
     flex-flow: row wrap;
 `;
 
+const Item = styled.div`
+    margin: 3%;
+`
+
+const ItemImg = styled.img`
+    object-fit: cover;
+    width: 100%;
+`
+
 export default function Disney(){
 
     //will set the current disney character
@@ -44,10 +53,10 @@ export default function Disney(){
                 <ItemsWrapper>
                     {
                         characters.map((character: Character) =>
-                            <div key = {character._id}>
+                            <Item key = {character._id}>
                                 <h2>{character.name}</h2>
-                                <img src = {character.imageUrl} alt = {character.name} />
-                            </div>
+                                <ItemImg src = {character.imageUrl} alt = {character.name} />
+                            </Item>
                         )
                     }
                 </ItemsWrapper>

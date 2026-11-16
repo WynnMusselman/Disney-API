@@ -1,9 +1,15 @@
-import Disney from "./components/Disney.tsx";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Root from "./components/Root.tsx";
 
 
 function App() {
+    const router = createBrowserRouter(
+        [
+            {path: '*', Component: Root}
+        ]
+    );
   return(
-      <Disney />
+      <RouterProvider router = {router}/>
   )
 }
 
